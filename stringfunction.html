@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="display" onclick="manageReadMore()"></div>
+    <script>
+
+        let isReadMore = true;
+        let my="abc is the javascript THis is  the javascript This is the javascript THis is  the javascriptThis is the javascript THis is  the javascriptThis is the javascript THis is  the javascriptThis is the javascript THis is  the javascriptThis is the javascript THis is  the javascriptThis is the javascript THis is  the javascriptThis is the javascript THis is  the javascriptThis is the javascript THis is  the javascript";
+
+
+        console.log(my.endsWith("javascript",));
+
+        manageReadMore();
+        function manageReadMore()
+        {
+
+            document.getElementById("display").innerHTML = isReadMore? my.slice(0,15).concat("...readMore") : my.concat("...readless") ;
+
+            isReadMore = !isReadMore;
+        }
+
+    </script>
+    
+</body>
+</html>
